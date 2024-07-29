@@ -7,48 +7,12 @@
     <em>Autor: Giuseppe Lavarello</em><br>
 </div>
 
-# Python para Data Science: Repaso grupal 
+# Python para Data Science: Repaso de Entornos y Kernels 
 
-**Fecha de repaso**: 28 de Julio de 2024
+**Fecha de creación**: 28 de Julio de 2024
 
 # Objetivos:
-- Desenredar el uso de conda y la creación de entornos y kernels vistos en la clase pasada.
-
-# Usos de un Entorno de Conda
-
-### 1. **Aislamiento de Proyectos**
-   - **Descripción**: Cada entorno de Conda puede tener su propia versión de Python y paquetes instalados. Esto evita conflictos entre proyectos que requieren diferentes versiones de bibliotecas.
-   - **Ejemplo**: Puedes tener un entorno para un proyecto que usa `numpy` 1.18 y otro entorno para un proyecto que usa `numpy` 1.21.
-
-### 2. **Gestión de Dependencias**
-   - **Descripción**: Los entornos permiten gestionar las dependencias específicas de cada proyecto. Puedes instalar, actualizar y eliminar paquetes sin afectar otros proyectos.
-   - **Ejemplo**: Instalar `scikit-learn` en un entorno y mantener otras versiones o paquetes distintos en otros entornos.
-
-### 3. **Reproducibilidad de Experimentos**
-   - **Descripción**: Crear un entorno con las versiones exactas de paquetes y Python asegura que el código se ejecute de manera consistente en diferentes máquinas o entornos.
-   - **Ejemplo**: Exportar un archivo `environment.yml` con las especificaciones del entorno para reproducir el entorno en otra máquina.
-
-### 4. **Pruebas de Compatibilidad**
-   - **Descripción**: Puedes probar tu código con diferentes versiones de bibliotecas o Python sin comprometer la estabilidad de tu entorno principal.
-   - **Ejemplo**: Crear un entorno para probar la compatibilidad con una nueva versión de una biblioteca antes de actualizarla en el entorno de producción.
-
-### 5. **Entornos de Desarrollo y Producción**
-   - **Descripción**: Puedes crear entornos separados para el desarrollo y la producción de tu aplicación. Esto asegura que las dependencias de desarrollo no interfieran con el entorno de producción.
-   - **Ejemplo**: Un entorno de desarrollo puede incluir herramientas de depuración y documentación, mientras que el entorno de producción solo incluye las dependencias necesarias para ejecutar la aplicación.
-
-### 6. **Gestión de Paquetes con Conda y Pip**
-   - **Descripción**: Conda permite instalar paquetes tanto desde sus repositorios como desde PyPI (Python Package Index) usando `pip`, facilitando la instalación de paquetes que no están disponibles en Conda.
-   - **Ejemplo**: Instalar paquetes de Conda y luego usar `pip` para instalar una biblioteca adicional no disponible en Conda.
-
-### 7. **Facilitar la Colaboración**
-   - **Descripción**: Compartir entornos con colaboradores usando un archivo `environment.yml` permite a otros usuarios replicar exactamente el entorno necesario para trabajar en un proyecto.
-   - **Ejemplo**: Crear un archivo `environment.yml` que otros colaboradores pueden usar para crear un entorno idéntico con `conda env create -f environment.yml`.
-
-### 8. **Manejo de Versiones de Python**
-   - **Descripción**: Permite gestionar múltiples versiones de Python y sus paquetes sin conflictos. Esto es útil si trabajas con proyectos que requieren diferentes versiones de Python.
-   - **Ejemplo**: Tener un entorno con Python 3.8 para un proyecto y otro con Python 3.9 para otro proyecto.
-
-
+- Desenredar el uso de conda y la creación de entornos y kernels.
 
 # Cómo Crear un Entorno con Conda
 
@@ -59,14 +23,15 @@
 
 ### Paso 1: Abrir la Terminal o Anaconda Prompt
 1. **En Windows**: Abre **Anaconda Prompt** desde el menú de inicio.  
-![alt text](.\\Imagenes\\abrir_prompt.png)
+![abrir_prompt](.\\Imagenes\\abrir_prompt.png)
 2. **En macOS/Linux**: Abre la **Terminal**.
 
 ### Paso 2: Crear un Nuevo Entorno
 1. Ejecuta el siguiente comando para crear un nuevo entorno (reemplaza `myenv` con el nombre que deseas darle al entorno y `python=3.12` con la versión de Python que prefieras):
    ```sh
    conda create --name myenv python=3.12
-   ```
+   ```  
+![crear_env](.\\Imagenes\\crear_env.jpg)
 # Cómo Utilizar un Entorno con Conda
 
 ### Activar el Entorno
@@ -75,7 +40,8 @@
     ```sh
     conda activate myenv
     ```
-- Verificar el Entorno Activo: El nombre del entorno debería aparecer en la línea de comandos, indicando que el entorno está activo.
+- Verificar el Entorno Activo: El nombre del entorno debería aparecer en la línea de comandos, indicando que el entorno está activo.  
+![check_env.jpg](.\\Imagenes\\check_env.jpg)
 
 ### Instalar Paquetes Adicionales en el Entorno
 - Para instalar paquetes adicionales en el entorno activo, usa el comando:
@@ -112,7 +78,7 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
     ![check_env.jpg](.\\Imagenes\\check_env.jpg)
 
 2. **Instalar Jupyter Notebook**:
-   - Como Jupyter Notebook no debería estar instalado en el entorno, instálalo con:
+   - Como Jupyter Notebook no debería estar instalado en el entorno nuevo, instálalo con:
      ```sh
      conda install jupyter
      ```
@@ -122,7 +88,7 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
 
 ### Paso 2: Instalar el Paquete `ipykernel`
 
-1. **Instalar `ipykernel`** (opcional, instalar jupyter deberia haberlo instalado):
+1. **Instalar `ipykernel`** (opcional, Jupyter debería haberlo instalado como requisito):
    - Asegúrate de que el entorno esté activado y luego instala `ipykernel`:
      ```sh
      conda install ipykernel
@@ -164,6 +130,10 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
    - Si deseas eliminar un kernel, ejecuta:
      ```sh
      jupyter kernelspec uninstall myenv-kernel
+     ```
+     o
+     ```sh
+     jupyter kernelspec remove myenv-kernel
      ```
    - Reemplaza `myenv-kernel` con el nombre del kernel que deseas eliminar.
 
