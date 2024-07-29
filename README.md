@@ -131,7 +131,7 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
      ```sh
      jupyter kernelspec uninstall myenv-kernel
      ```
-     o
+     o bien
      ```sh
      jupyter kernelspec remove myenv-kernel
      ```
