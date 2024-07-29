@@ -23,7 +23,7 @@
 
 ### Paso 1: Abrir la Terminal o Anaconda Prompt
 1. **En Windows**: Abre **Anaconda Prompt** desde el menú de inicio.  
-![abrir_prompt](.\\Imagenes\\abrir_prompt.png)
+![abrir_prompt](/Imagenes/abrir_prompt.png)
 2. **En macOS/Linux**: Abre la **Terminal**.
 
 ### Paso 2: Crear un Nuevo Entorno
