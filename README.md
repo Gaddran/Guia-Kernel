@@ -31,7 +31,7 @@
    ```sh
    conda create --name myenv python=3.12
    ```  
-![crear_env](.\\Imagenes\\crear_env.jpg)
+![crear_env](/Imagenes/crear_env.jpg)
 # Cómo Utilizar un Entorno con Conda
 
 ### Activar el Entorno
@@ -41,7 +41,7 @@
     conda activate myenv
     ```
 - Verificar el Entorno Activo: El nombre del entorno debería aparecer en la línea de comandos, indicando que el entorno está activo.  
-![check_env.jpg](.\\Imagenes\\check_env.jpg)
+![check_env.jpg](/Imagenes/check_env.jpg)
 
 ### Instalar Paquetes Adicionales en el Entorno
 - Para instalar paquetes adicionales en el entorno activo, usa el comando:
@@ -75,15 +75,15 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
      ```sh
      conda activate myenv
      ```
-    ![check_env.jpg](.\\Imagenes\\check_env.jpg)
+    ![check_env.jpg](/Imagenes/check_env.jpg)
 
 2. **Instalar Jupyter Notebook**:
    - Como Jupyter Notebook no debería estar instalado en el entorno nuevo, instálalo con:
      ```sh
      conda install jupyter
      ```
-    ![instalar_jupyter_01](.\\Imagenes\\instalar_jupyter_01.jpg) 
-    ![instalar_jupyter_02](.\\Imagenes\\instalar_jupyter_02.jpg)     
+    ![instalar_jupyter_01](/Imagenes/instalar_jupyter_01.jpg) 
+    ![instalar_jupyter_02](/Imagenes/instalar_jupyter_02.jpg)     
 
 
 ### Paso 2: Instalar el Paquete `ipykernel`
@@ -93,7 +93,7 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
      ```sh
      conda install ipykernel
      ```
-    ![installar_kernel](.\\Imagenes\\installar_kernel.jpg)  
+    ![installar_kernel](/Imagenes/installar_kernel.jpg)  
 
 ### Paso 3: Crear el Kernel
 
@@ -102,7 +102,7 @@ Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos paso
      ```sh
      python -m ipykernel install --user --name myenv --display-name "myenv-kernel"
      ```
-    ![crear_kernel](.\\Imagenes\\crear_kernel.jpg)  
+    ![crear_kernel](/Imagenes/crear_kernel.jpg)  
 
    - **Explicación de los parámetros**:
      - `--name myenv`: El nombre del kernel (debe coincidir con el nombre del entorno de Conda).
