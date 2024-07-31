@@ -40,6 +40,7 @@
     ```sh
     conda activate myenv
     ```
+- Donde remplazas myenv por el nombre que le diste al entorno  
 - Verificar el Entorno Activo: El nombre del entorno debería aparecer en la línea de comandos, indicando que el entorno está activo.  
 ![check_env.jpg](/Imagenes/check_env.jpg)
 
@@ -62,6 +63,7 @@
     ```sh
     conda remove --name myenv --all
     ```
+- Donde remplazas myenv por el nombre que le diste al entorno     
 # Cómo Crear un Kernel con Conda para Jupyter
 
 Para crear un kernel con Conda para usarlo en Jupyter Notebook, sigue estos pasos:
